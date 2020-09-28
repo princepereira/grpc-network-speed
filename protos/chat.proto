@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package student;
+
+message Request {
+  string job_id = 1;
+  int32 sl_no = 2;
+}
+
+message Response {
+  string job_id = 1;
+  int32 sl_no = 2;
+  string name = 3;
+}
+
+service StudentService {
+  rpc GetName(Request) returns (Response);
+}

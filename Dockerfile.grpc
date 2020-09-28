@@ -1,0 +1,8 @@
+FROM sdpon-base:latest
+
+# Set the working directory
+WORKDIR /app
+
+# Copy required binary
+COPY main /app/
+ENTRYPOINT ["/app/main"]
